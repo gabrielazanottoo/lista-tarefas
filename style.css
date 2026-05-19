@@ -20,3 +20,21 @@
     height: 50px;
     color: #fff;
 }
+
+.inserir-tarefa {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.delete {
+    border: none;
+    background-color: #01016b;
+    color: #fff;
+}
+
+.tarefa {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
