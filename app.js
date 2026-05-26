@@ -4,6 +4,12 @@ const button = document.getElementById('button')
 
 function inserirTarefa(){
     let tarefa =  input.value
+
+    if(tarefa == ''){
+        alert('Por favor, insira uma tarefa')
+        return
+    }
+
     display.innerHTML += 
     `<div class="tarefa">
     ${tarefa} 
@@ -16,9 +22,11 @@ function inserirTarefa(){
     input.value = ''
 }
 
-if(input.value != ''){
-    alert('Por favor, insira uma tarefa')
-}else{
-    button.addEventListener("click", inserirTarefa)
+function deletarTarefa(event){
+    if(event.target.classList.contains("delete")){
+    event.target.parentElement.parentElement.remove()
+    }
 }
+button.addEventListener("click", inserirTarefa)
+display.addEventListener("click", deletarTarefa)
 
